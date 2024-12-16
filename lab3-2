@@ -1,0 +1,16 @@
+ a, b, c
+
+        printf("Enter a, b, c: ");
+        scanf("%f, %f, %f", &a, &b, &c);
+
+a == 0 && b == 0 && c == 0
+
+"\nGoodBye"
+
+a*a + b*b == c*c
+
+"Pythagorean triple: %.2f + %.2f = %.2f\n",a*a,b*b,c*c
+
+"Not a pythagorean triple: %.2f + %.2f != %.2f\n",a*a,b*b,c*c
+
+a != 0 && b != 0 && c != 0
