@@ -1,0 +1,37 @@
+    char a;
+    float price;
+    int discount;
+    
+    printf("Please input price: ");
+    scanf("%f%*c",&price);
+    printf("Please input discount code: ");
+    scanf("%c",&a);
+    printf("\n");
+***************************************************
+
+a
+
+*****************************************************
+
+        case 'a':
+        case 'A':
+            discount = 25;
+            break;
+        case 'b':
+        case 'B':
+            discount = 15;
+            break;
+        case 'c':
+        case 'C':
+            discount = 5;
+            break;
+        default:
+            discount = 0;
+
+**************************************************
+    price *= 1 - ((float)discount / 100);
+    if (discount != 0)
+        printf("Your discount is %d percent\n",discount);
+    else
+        printf("Wrong code.Your discount is %d percent\n",discount);
+    printf("Your new price is %.2f\n",price);
