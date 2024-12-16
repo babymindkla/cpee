@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.14159
+
+int main()
+{
+    float R1,R2,R3,Rtotal;
+    printf("R1 = ");
+    scanf("%f",&R1);
+    printf("R2 = ");
+    scanf("%f",&R2);
+    printf("R3 = ");
+    scanf("%f",&R3);
+    printf("\n");
+    Rtotal = R3 + ((R1*R2)/(R1+R2));
+    printf("Rtotal = %.2f",Rtotal);
+    return 0;
+
+}
