@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) 
+{
+  int n1,n2,gcd,lcm,a = 1;
+  printf("Please input first number : ");
+  scanf("%d",&n1);
+  printf("Please input second number : ");
+  scanf("%d",&n2);
+  if (n1 < 0)
+    n1 = -n1;
+  else if (n2 < 0)
+    n2 = -n2;
+
+  do{
+    if (n1 % a == 0&& n2 % a == 0)
+      gcd = a;
+    a++;
+    
+  }while(a <= n1 && a <= n2);
+  lcm = (n1 * n2) / gcd;
+
+  
+  printf("\nThe greatest common divisor is %d",gcd);
+  printf("\nThe least common multiple is %d",lcm);
+  
+  return 0;
+}
