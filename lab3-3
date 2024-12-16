@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) 
+int main() 
 {
   int n1,n2,gcd,lcm,a = 1;
   printf("Please input first number : ");
