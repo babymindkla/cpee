@@ -1,0 +1,51 @@
+
+#include <stdio.h>
+
+int main()
+{
+  int buy = 0,nf = 0;
+  float free = 0,pay = 0;
+
+  printf("How many items to buy : ");
+  scanf("%d",&buy);
+  
+  if (buy % 5 ==0){
+    buy++;
+    printf("You can get 1 item free\nNow you have %d items to buy\n",buy);
+    
+  }
+  nf = buy/5;
+  float price[buy];
+  
+  for (int i = 0; i < buy;i++){
+    printf("Enter price %d : ",i+1);
+    scanf("%f",&price[i]);
+  }
+  
+  
+  for(int i = 0; i< buy-1;i++){
+    for(int j = 0; j < buy - i -1; j++){
+      if (price[j] > price[j+1]){
+        float temp = price[j];
+        price[j] = price[j+1];
+        price[j+1] = temp;
+      }
+    }
+  }
+
+  for (int i = 0; i < buy; i++){
+    pay += price[i];
+  }
+  for (int i = 0; i < nf; i++){
+    pay -= price[i];
+    free += price[i];
+    
+  }
+  
+  if (free != 0)
+    printf("Free %.2f baht ,and pay %.2f baht",free,pay);
+  else
+    printf("Pay %.2f baht",pay);
+  
+  return 0;
+}
