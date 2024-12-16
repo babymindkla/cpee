@@ -1,0 +1,6 @@
+((-b)-sqrt(b*b-4*a*c))/(2*a)
+asin((a*c)/b)*(180/3.14)
+5*log10(a/b)
+fabs(b + c - (a*a))
+exp(a) + b
+log((b*c)/a)
