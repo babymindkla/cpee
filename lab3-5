@@ -1,0 +1,16 @@
+    int x;
+
+    while (1){
+        printf("Enter number : ");
+        scanf("%d",&x);
+        if (x == n){
+            printf("correct");
+            break;
+        }else if (x > n){
+            printf("x is more than n\n");
+        }else if (x < n){
+            printf("x is less than  n\n");
+        }
+            
+        
+    }
