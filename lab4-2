@@ -1,0 +1,63 @@
+#include <stdio.h>                              ก็อปเอาเองเด้อ
+int main()
+{
+  
+  int mat[3][3],d1 = 0,d2 = 0,i,j;
+  printf("Please Input 3x3 dimension matrix\n");
+  for (int a = 0; a < 3; a++){
+    for (int b = 0; b < 3; b++){
+      printf("Input Number for (%d, %d) : ",a+1,b+1);
+      scanf("%d",&mat[a][b]);
+    }
+  }
+
+  printf("\n=== Input Matrix ===\n\n");
+  for(int i=0;i<3;i++)
+   {
+       for(int j=0;j<3;j++)
+       {
+           printf("%5d", mat[i][j]);
+       }
+       printf("\n");
+   }
+  
+  for (int a = 0; a < 3; a++){
+    int k = a;
+    int d = 1;
+    for (int b = 0; b < 3;b++){
+      if (k > 2){
+        k -= 3;
+      }
+      d *= mat[b][k];
+      
+      //printf("%d%d",j,k);
+      k++;
+    }
+    //printf("\n");
+    d1 += d;
+  }
+
+  for (int a = 2; a < 5; a++){
+    int k = a;
+    int d = 1;
+    for(int b = 0; b < 3; b++){
+      
+      if (k > 2){
+        k -= 3;
+        
+      }
+      if (k < 0){
+        k += 3;
+      }
+      
+      d *= mat[b][k];
+      //printf("%d%d",j,k);
+      k--; 
+    }
+    //printf("\n");
+    d2 += d;
+  }
+  printf("\nDeterminant of matrix is %d.",d1-d2);
+  
+  return 0;
+}
