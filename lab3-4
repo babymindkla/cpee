@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+
+    int n,m = 2;
+    printf("n = ");
+    scanf("%d",&n);
+    
+    if (n < 0){
+        printf("Wrong input\ncan not factoring");
+        return 0;}
+    int check = 1;
+    for (int a = 2; a*a <= n; a++){
+        if (n % a == 0){
+            check = 0;}
+    }
+    if (check && n != 1){
+        printf("%d is prime number",n);
+        return 0;
+    }
+        
+    printf("%d = ",n);
+    int first = 1;
+    while (m*m <= n){
+        while (n % m == 0){
+            if (!first)
+                printf("x");
+            printf("%d",m);
+        
+            n /= m;
+            first = 0;
+        }
+        m++;
+    }
+
+    if (n >= 1){
+            
+        if (!first){
+            printf("x");}
+        printf("%d",n);}
+    return 0;
+}
