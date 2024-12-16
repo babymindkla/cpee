@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+  int u=0,l=0,d=0;
+  char str[500];
+  printf("Enter string : ");
+  fgets(str, 500, stdin);
+
+
+
+  printf("\nThe Uppercase Characters = ");
+  for (int i = 0; i < str[i] != '\0'; i++){
+    if (str[i] >= 'A' && str[i] <= 'Z'){
+      u++;
+      printf("%c",str[i]);
+    }
+    
+  }
+
+  printf("\nThe Lowercase Characters = ");
+  for (int i = 0; i < str[i] != '\0'; i++){
+    if (str[i] >= 'a' && str[i] <= 'z'){
+      l++;
+      printf("%c",str[i]);
+    }
+
+  }
+  
+  printf("\nThe Number = ");
+  for (int i = 0; i < str[i] != '\0'; i++){
+    if (str[i] >= '0' && str[i] <= '9'){
+      d++;
+      printf("%c",str[i]);
+    }
+
+  }
+  printf("\nThe number of uppercases = %d\nThe number of lowercases = %d\nThe number of numbers = %d",u,l,d);
+
+  
+  
+  
+}
