@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main() {
+  char word[100], *ptr, input;
+  int count, i;
+
+  printf("Enter the word : ");
+  fgets(word, sizeof(word), stdin);
+
+  int len = 0;
+  for (int j = 0; word[j] != '\0'; j++) {
+    len++;
+  }
+
+  for (int j = 0; word[j] != '\0'; j++) {
+    if (word[j] >= 'A' && word[j] <= 'Z') {
+      word[j] = word[j] + 32;
+    }
+    if (word[j] == 32)
+      word[j] = '_';
+  }
+
+  while (1) {
+
+    printf("Enter the letter : ");
+    scanf(" %c", &input);
+    int low = 0;
+    if (input >= 'A' && input <= 'Z') {
+      input = input + 32;
+      low = 1;
+    }
+    if (input == '-') {
+      printf("Exit.");
+      exit(0);
+    }
+
+    count = 0;
+    ptr = word;
+
+    for (i = 0; i <= len; i++) {
+      if (*ptr == input)
+        count++;
+      ptr++;
+    }
+    if (low)
+      input -= 32;
+    printf("Has %d of '%c'\n", count, input);
+  }
+}
