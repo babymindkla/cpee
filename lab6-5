@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_STRING_LENGTH 500
+
+void reverseString(char *pinput);
+
+int main()
+{
+    char *pInput;
+    char msg[MAX_STRING_LENGTH];
+    printf("Input string: ");
+    fgets(msg, sizeof(msg), stdin);
+    for(int i = 0; msg[i] != '\0'; i++){
+        if(msg[i] == '\n'){
+            msg[i] = '\0';
+            break;
+        }
+    }    
+    pInput = msg;
+    
+    reverseString(pInput);
+    printf("Reversed string: %s\n",pInput);
+}
+
+
+void reverseString(char *pInput)
+{
+    int len = 0;
+    while(pInput[len] != '\0'){
+        len++;
+    }
+    
+
+    
+    int round = len/2;
+    for(int i = 0; i < round;i++){
+        char temp = pInput[i];
+        pInput[i] = pInput[len-i-1];
+        pInput[len-i-1] = temp;
+    }
+}
