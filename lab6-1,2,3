@@ -1,0 +1,28 @@
+--1--
+int *A = &b;
+*A = 8;
+char ch[10];
+char *ptr = &ch[4];
+*ptr = 'D';
+--2--
+FF04h
+FF00h
+FF00h
+37
+22
+Ff00h
+37
+FF08h
+39
+74
+--3--
+1
+2
+FFE8h
+5
+1
+FFF0h
+3
+FFF4h
+FFF4h
+13
